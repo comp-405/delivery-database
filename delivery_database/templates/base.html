@@ -6,9 +6,12 @@
   <meta charset="UTF-8">
   <title>Tips | {% block title %}{% endblock title %}</title>
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
 <body>
-  <div class="menu"></div>
+  <div class="menu">
+    <a href="{% url 'home' %}" class="menu__title">Tips-A-Lot</a>
+  </div>
   {% block content %}{% endblock content %}
 </body>
 </html>
