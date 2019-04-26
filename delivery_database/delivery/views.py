@@ -1,5 +1,5 @@
 from django.views.generic import CreateView
-from django.shortcuts import render
+from django.shortcuts import render, reverse
 
 from .forms import DeliveryForm
 from .models import Driver, Vehicle, Delivery
@@ -15,13 +15,18 @@ class DriverCreateView(CreateView):
     fields = '__all__'
 
     def get_success_url(self):
-        driver_id = self.user_id
-        return f'new-delivery/{driver_id}/'
+        driver_id = self.object.user_id
+        return reverse('select_vehicle', args=(driver_id,))
 
 class VehicleCreateView(CreateView):
     model = Vehicle
     template_name = 'vehicle_new.html'
     fields = '__all__'
+
+    def get_success_url(self):
+        driver_id = self.kwargs['driver']
+        vehicle_id = self.objects.id
+        return reverse('create_delivery', args=(driver_id, vehicle_id))
 
 def select_driver(request):
     all_drivers = Driver.objects.all().order_by('name')

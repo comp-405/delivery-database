@@ -73,7 +73,7 @@ body {
 	display: flex;
 }
 
-.select-list__item {
+.select-list__driver {
 	background-color: red;
 	width: 28vw;
 	height: 180px;
@@ -90,7 +90,7 @@ body {
 	grid-template-rows: 45px 45px 45px 45px;
 }
 
-.select-list__item:hover {
+.select-list__driver:hover {
 	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -105,12 +105,68 @@ body {
 
 .driver__email,
 .driver__company,
-.driver__location {
+.driver__location,
+.vehicle__year,
+.vehicle__model,
+.vehicle__color {
 	margin-left: 15px;
 }
 
-.new-driver__text {
+.new-driver__text,
+.new-vehicle__text {
 	font-family: 'Lobster', cursive;
 	font-size: 2em;
 	margin: 60px 0 0 40px;
+}
+
+.select-list__vehicle {
+	background-color: red;
+	width: 28vw;
+	height: 180px;
+	margin: 20px 1vw;
+	border-radius: 3px;
+	color: white;
+
+	font-family: sans-serif;
+	font-weight: 100;
+	text-decoration: none;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 60px 60px 60px;
+}
+
+#new-delivery,
+#new-driver,
+#new-vehicle {
+	color: red;
+
+	font-family: 'Lobster', cursive;
+	font-size: 3em;
+	text-align: center;
+}
+
+.delivery-form {
+	width: 20vw;
+	margin: auto 40vw;
+}
+
+.delivery-form p {
+	display: block;
+}
+
+.delivery-form__submit {
+	width: 10vw;
+	height: 40px;
+	margin: 0 5vw;
+	background-color: red;
+	color: white;
+	border: none;
+	border-radius: 3px;
+
+	font-family: 'Lobster', cursive;
+}
+
+.delivery-form__submit:hover {
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
