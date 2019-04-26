@@ -4,7 +4,7 @@ from django.db import models
 
 class Driver(models.Model):
     user_id = models.AutoField(primary_key=True)
-    ssm = models.CharField(max_length=10)
+    ssn = models.CharField(max_length=10)
     name = models.CharField(max_length=50)
     email = models.CharField(max_length=80)
     state = models.CharField(max_length=80)
@@ -22,7 +22,7 @@ class Vehicle(models.Model):
     def __str__(self):
       return f"{self.year} {self.model}"
 
-class Delivery(model.Model):
+class Delivery(models.Model):
     amount = models.IntegerField()
     tip = models.IntegerField()
     driver = models.ForeignKey(
