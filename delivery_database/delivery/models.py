@@ -11,10 +11,16 @@ class Driver(models.Model):
     city = models.Charfield(max_length=80)
     company = models.Charfield(max_length=80)
 
+    def __str__(self):
+      return self.name
+
 class Vehicle(models.Model):
     model = models.Charfield(max_length=60)
     color = models.Charfield(max_length=60)
     year = models.Charfield(max_length=60)
+
+    def __str__(self):
+      return f"{self.year} {self.model}"
 
 class Delivery(model.Model):
     amount = models.Integerfield()
@@ -27,3 +33,6 @@ class Delivery(model.Model):
       Vehicle,
       related_name = 'deliveries',
       on_delete = models.CASCADE)
+    
+    def __str__(self):
+      return f"Total: {self.amount}, Tip: {self.tip}"
