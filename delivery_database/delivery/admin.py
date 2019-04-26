@@ -11,5 +11,6 @@ class DriverAdmin(admin.ModelAdmin):
 class VehicleAdmin(admin.ModelAdmin):
     list_display = ['model', 'color', 'year']
 
+@admin.register(Delivery)
 class DeliveryAdmin(admin.ModelAdmin):
     list_display = ['amount', 'tip', 'driver', 'vehicle']
