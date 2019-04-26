@@ -25,7 +25,7 @@ class VehicleCreateView(CreateView):
 
     def get_success_url(self):
         driver_id = self.kwargs['driver']
-        vehicle_id = self.objects.id
+        vehicle_id = self.object.id
         return reverse('create_delivery', args=(driver_id, vehicle_id))
 
 def select_driver(request):

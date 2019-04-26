@@ -45,15 +45,10 @@ body {
 	background-color: red;
 	color: white;
 	border-radius: 3px;
-	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .banner__new-delivery:hover {
-	background-color: white;
-}
-
-.banner__new-delivery:hover > .banner__button {
-	color: red;
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .banner__button {
@@ -90,7 +85,8 @@ body {
 	grid-template-rows: 45px 45px 45px 45px;
 }
 
-.select-list__driver:hover {
+.select-list__driver:hover,
+.select-list__vehicle:hover {
 	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -168,5 +164,30 @@ body {
 }
 
 .delivery-form__submit:hover {
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+#new-delivery-success {
+	color: red;
+
+	font-family: 'Lobster', cursive;
+	font-size: 2em;
+	text-align: center;
+}
+
+#new-delivery-home {
+	background-color: red;
+	color: white;
+	width: 120px;
+	height: 20px;
+	padding: 10px;
+	margin: 0 49vw;
+	border-radius: 3px;
+
+	font-family: 'Lobster', cursive;
+	text-decoration: none;
+}
+
+#new-delivery-home:hover {
 	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }

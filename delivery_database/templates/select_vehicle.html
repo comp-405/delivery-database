@@ -11,7 +11,7 @@
     <p class="vehicle__color vehicle__field">{{ vehicle.color }}</p>
   </a>
 {% endfor %}
-  <a href="{% url 'new_vehicle' %}" class="select-list__vehicle new-vehicle">
+  <a href="{% url 'new_vehicle' driver %}" class="select-list__vehicle new-vehicle">
     <p class="new-vehicle__text">Add A New Vehicle</p>
   </a>
 </div>

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}New Vehicle{% endblock title %}
+
+{% block content %}
+<h1 id="new-vehicle">New Vehicle</h1>
+<form action="." method="post" class="delivery-form">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input class="delivery-form__submit" type="submit" value="Submit">
+</form>
+{% endblock content %}

@@ -15,5 +15,5 @@ urlpatterns = [
     path('new-delivery/<int:driver>/', select_vehicle, name='select_vehicle'),
     path('new-delivery/<int:driver>/<int:vehicle>/', create_delivery, name='create_delivery'),
     path('new-driver/', DriverCreateView.as_view(), name='new_driver'),
-    path('new-vehicle/<int:driver>', VehicleCreateView.as_view(), name='new_vehicle'),
+    path('new-vehicle/<int:driver>/', VehicleCreateView.as_view(), name='new_vehicle'),
 ]
