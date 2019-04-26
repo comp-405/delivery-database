@@ -25,7 +25,7 @@ def select_driver(request):
 
 def select_vehicle(request, driver):
     all_vehicles = Vehicle.objects.all().order_by('year')
-    return render(request, 'select_vehicle.html', {'all_vehicles': all_vehicles})
+    return render(request, 'select_vehicle.html', {'all_vehicles': all_vehicles, 'driver': driver})
 
 def create_delivery(request, driver, vehicle):
     if request.method == 'POST':
