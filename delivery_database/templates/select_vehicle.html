@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}New Tip{% endblock title %}
+
+{% block content %}
+<div class="select-list">
+{% for vehicle in all_vehicles %}
+  <a href="{% url 'create_delivery' driver vehicle.id %}" class="select-list__vehicle vehicle">
+    <p class="vehicle__year vehicle__field">{{ vehicle.year }}</p>
+    <p class="vehicle__model vehicle__field">{{ vehicle.model }}</p>
+    <p class="vehicle__color vehicle__field">{{ vehicle.color }}</p>
+  </a>
+{% endfor %}
+  <a href="{% url 'new_vehicle' %}" class="select-list__vehicle new-vehicle">
+    <p class="new-vehicle__text">Add A New Vehicle</p>
+  </a>
+</div>
+{% endblock content %}
