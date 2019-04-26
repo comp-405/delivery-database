@@ -1,6 +1,7 @@
 from django.views.generic import CreateView
 from django.shortcuts import render
 
+from .forms import DeliveryForm
 from .models import Driver, Vehicle, Delivery
 
 # Create your views here.
@@ -25,4 +26,16 @@ def select_vehicle(request, driver):
     return render(request, 'select_vehicle.html')
 
 def create_delivery(request, driver, vehicle):
-    pass
+    if request.method == 'POST':
+        delivery_form = DeliveryForm(request.POST)
+        if delivery_form.is_valid():
+            new_delivery = delivery_form.save(commit=False)
+            driver = Driver.objects.get(user_id=driver)
+            vehicle = Vehicle.objects.get(id=vehicle)
+            new_delivery.driver = driver
+            new_delivery.vehicle = vehicle
+            new_delivery.save()
+            return render(request, 'delivery_done.html', {'new_delivery': new_delivery})
+    else:
+        delivery_form = DeliveryForm()
+        return render(request, 'delivery_new.html', {'delivery_form': delivery_form})
