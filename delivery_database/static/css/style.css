@@ -65,3 +65,52 @@ body {
 
 	text-decoration: none;
 }
+
+.select-list {
+	width: 90vw;
+	margin: 15px 5vw;
+
+	display: flex;
+}
+
+.select-list__item {
+	background-color: red;
+	width: 28vw;
+	height: 180px;
+	margin: 20px 1vw;
+	border-radius: 3px;
+	color: white;
+
+	font-family: sans-serif;
+	font-weight: 100;
+	text-decoration: none;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 45px 45px 45px 45px;
+}
+
+.select-list__item:hover {
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.driver__field {
+	margin-top: 10px;
+	height: 50px;
+}
+
+.driver__name {
+	text-align: center;
+}
+
+.driver__email,
+.driver__company,
+.driver__location {
+	margin-left: 15px;
+}
+
+.new-driver__text {
+	font-family: 'Lobster', cursive;
+	font-size: 2em;
+	margin: 60px 0 0 40px;
+}
