@@ -1,0 +1,67 @@
+body {
+	margin: 0;
+}
+
+.menu {
+	height: 120px;
+}
+
+.menu__title {
+	margin: 40px 0 40px 15px;
+	color: red;
+	float: left;
+
+	font-family: 'Lobster', cursive;
+	font-size: 2em;
+	text-decoration: none;
+}
+
+.banner {
+	width: 40vw;
+	height: 30vh;
+	margin: 20vh 30vw 0 30vw;
+
+	font-family: 'Lobster', cursive;
+	text-align: center;
+}
+
+.banner__title {
+	margin-bottom: 10px;
+	color: red;
+
+	font-size: 4em;
+}
+
+.banner__subtitle {
+	color: red;
+
+	font-weight: 100;
+}
+
+.banner__new-delivery {
+	width: 120px;
+	height: 40px;
+	margin: 0 calc(20vw - 60px) 0 calc(20vw - 60px);
+	background-color: red;
+	color: white;
+	border-radius: 3px;
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.banner__new-delivery:hover {
+	background-color: white;
+}
+
+.banner__new-delivery:hover > .banner__button {
+	color: red;
+}
+
+.banner__button {
+	width: 120px;
+	height: 30px;
+	padding-top: 10px;
+	float: left;
+	color: white;
+
+	text-decoration: none;
+}

@@ -3,5 +3,11 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-hi
+<div class="banner">
+<h1 class="banner__title">Tips-A-Lot</h1>
+<h3 class="banner__subtitle">Your one stop for your delivery tips.</h3>
+<div class="banner__new-delivery">
+  <a href="{% url 'select_driver' %}" class="banner__button">New Delivery</a>
+</div>
+</div>
 {% endblock content %}
