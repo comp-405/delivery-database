@@ -14,6 +14,10 @@ class DriverCreateView(CreateView):
     template_name = 'driver_new.html'
     fields = '__all__'
 
+    def get_success_url(self):
+        driver_id = self.user_id
+        return f'new-delivery/{driver_id}/'
+
 class VehicleCreateView(CreateView):
     model = Vehicle
     template_name = 'vehicle_new.html'
