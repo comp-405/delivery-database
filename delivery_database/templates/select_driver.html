@@ -5,15 +5,15 @@
 {% block content %}
 <div class="select-list">
 {% for driver in all_drivers %}
-  <a href="{% url 'select_vehicle' driver.user_id %}" class="select-list__item driver">
+  <a href="{% url 'select_vehicle' driver.user_id %}" class="select-list__driver driver">
     <p class="driver__name driver__field">{{ driver.name }}</p>
     <p class="driver__email driver__field">{{ driver.email }}</p>
     <p class="driver__company driver__field">{{ driver.company }}</p>
     <p class="driver__location driver__field">{{ driver.city }}, {{ driver.state }}</p>
   </a>
 {% endfor %}
-  <a href="{% url 'new_driver' %}" class="select-list__item new-driver">
-    <p class="new-driver__text">Add A New Driver</p>
+  <a href="{% url 'new_driver' %}" class="select-list__vehicle new-driver">
+    <p class="new-vehicle__text">Add A New Driver</p>
   </a>
 </div>
 {% endblock content %}
