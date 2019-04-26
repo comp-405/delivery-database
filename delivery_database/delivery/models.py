@@ -4,12 +4,12 @@ from django.db import models
 
 class Driver(models.Model):
     user_id = models.AutoField(primary_key=True)
-    SSN = models.Charfield(max_length=10)
+    ssm = models.Charfield(max_length=10)
     name = models.Charfield(max_length=50)
     email = models.Charfield(max_length=80)
     state = models.Charfield(max_length=80)
     city = models.Charfield(max_length=80)
-    Company = models.Charfield(max_length=80)
+    company = models.Charfield(max_length=80)
 
 class Vehicle(models.Model):
     models = models.Charfield(max_length=60)
