@@ -12,8 +12,8 @@ class Driver(models.Model):
     company = models.Charfield(max_length=80)
 
 class Vehicle(models.Model):
-    models = models.Charfield(max_length=60)
-    colors = models.Charfield(max_length=60)
+    model = models.Charfield(max_length=60)
+    color = models.Charfield(max_length=60)
     year = models.Charfield(max_length=60)
 
 class Delivery(model.Model):
