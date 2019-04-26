@@ -20,10 +20,12 @@ class VehicleCreateView(CreateView):
     fields = '__all__'
 
 def select_driver(request):
-    return render(request, 'select_driver.html')
+    all_drivers = Driver.objects.all().order_by('name')
+    return render(request, 'select_driver.html', {'all_drivers': all_drivers})
 
 def select_vehicle(request, driver):
-    return render(request, 'select_vehicle.html')
+    all_vehicles = Vehicle.objects.all().order_by('year')
+    return render(request, 'select_vehicle.html', {'all_vehicles': all_vehicles})
 
 def create_delivery(request, driver, vehicle):
     if request.method == 'POST':
