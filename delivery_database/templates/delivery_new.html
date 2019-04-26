@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}New Tip{% endblock title %}
+
+{% block content %}
+<h1 id="new-delivery">New Delivery</h1>
+<form class="delivery-form" action="." method="post">
+  {% csrf_token %}
+  {{ delivery_form.as_p }}
+  <input class="delivery-form__submit" type="submit" value="Submit">
+</form>
+{% endblock content %}
