@@ -4,27 +4,27 @@ from django.db import models
 
 class Driver(models.Model):
     user_id = models.AutoField(primary_key=True)
-    ssm = models.Charfield(max_length=10)
-    name = models.Charfield(max_length=50)
-    email = models.Charfield(max_length=80)
-    state = models.Charfield(max_length=80)
-    city = models.Charfield(max_length=80)
-    company = models.Charfield(max_length=80)
+    ssm = models.CharField(max_length=10)
+    name = models.CharField(max_length=50)
+    email = models.CharField(max_length=80)
+    state = models.CharField(max_length=80)
+    city = models.CharField(max_length=80)
+    company = models.CharField(max_length=80)
 
     def __str__(self):
       return self.name
 
 class Vehicle(models.Model):
-    model = models.Charfield(max_length=60)
-    color = models.Charfield(max_length=60)
-    year = models.Charfield(max_length=60)
+    model = models.CharField(max_length=60)
+    color = models.CharField(max_length=60)
+    year = models.CharField(max_length=60)
 
     def __str__(self):
       return f"{self.year} {self.model}"
 
 class Delivery(model.Model):
-    amount = models.Integerfield()
-    tip = models.Integerfield()
+    amount = models.IntegerField()
+    tip = models.IntegerField()
     driver = models.ForeignKey(
       Driver,
       related_name = 'deliveries',
