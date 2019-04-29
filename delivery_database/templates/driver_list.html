@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Drivers{% endblock title %}
+
+{% block content %}
+<div class="navigation">
+  <a href="{% url 'driver_list' %}" class="navigation__link navigation__link--disabled">Drivers</a>
+  <a href="{% url 'vehicle_list' %}" class="navigation__link">Vehicles</a>
+  <a href="{% url 'delivery_list' %}" class="navigation__link">Deliveries</a>
+</div>
+<div class="list">
+  <div class="driver driver-labels">
+    <p class="driver__id">ID</p>
+    <p class="driver__ssn">SSN</p>
+    <p class="driver__name">Name</p>
+    <p class="driver__email">Email</p>
+    <p class="driver__location">City, State</p>
+    <p class="driver__company">Company</p>
+  </div>
+  {% for driver in drivers %}
+  <div class="driver list__entry">
+    <p class="driver__id">{{ driver.user_id }}</p>
+    <p class="driver__ssn">{{ driver.ssn }}</p>
+    <p class="driver__name">{{ driver.name }}</p>
+    <p class="driver__email">{{ driver.email }}</p>
+    <p class="driver__location">{{ driver.city }}, {{ driver.state }}</p>
+    <p class="driver__company">{{ driver.company }}</p>
+  </div>
+  {% empty %}
+  
+  {% endfor %}
+</div>
+{% endblock content %}

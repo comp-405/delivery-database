@@ -48,7 +48,8 @@ body {
 }
 
 .banner__new-delivery:hover,
-.banner__list:hover {
+.banner__list:hover,
+.navigation__link:hover {
 	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -210,4 +211,83 @@ body {
 
 #new-delivery-home:hover {
 	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.navigation {
+	width: calc(100vw - 10px);
+	height: 60px;
+
+	display: flex;
+	align-items: stretch;
+}
+
+.navigation__link {
+	height: 45px;
+	margin: 0 5px 0 5px;
+	padding: 15px 0 0 10vw;
+	background-color: red;
+	color: white;
+	border-radius: 3px;
+
+	font-family: 'Lobster', cursive;
+	font-size: 1.5em;
+	text-decoration: none;
+
+	flex: 1;
+}
+
+.navigation__link--disabled {
+	background-color: #e96d6d;
+	color: #d4d4d4;
+	pointer-events: none;
+}
+
+.driver {
+	display: grid;
+	grid-template-columns: 1fr 2fr 3fr 4fr 3fr 3fr;
+	grid-template-rows: 40px;
+
+	font-family: 'American Typewriter', sans-serif;
+}
+
+.driver-labels {
+	color: #505050;
+	margin: auto 5px;
+	border-bottom: 1px solid black;
+}
+
+.driver__id {
+	grid-column: 1 / 2;
+
+	text-align: center;
+}
+
+.driver__ssn {
+	grid-column: 2 / 3;
+
+	text-align: left;
+}
+
+.driver__name {
+	grid-column: 3 / 4;
+
+	text-align: left;
+}
+
+.driver__email {
+	grid-column: 4 / 5;
+
+	text-align: left;
+}
+
+.driver__location {
+	grid-column: 5 / 6;
+
+	text-align: left;
+}
+
+.driver__company {
+	grid-column: 6 / 7;
+
+	text-align: left;
 }
