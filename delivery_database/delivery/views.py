@@ -1,4 +1,4 @@
-from django.views.generic import CreateView
+from django.views.generic import CreateView, ListView
 from django.shortcuts import render, reverse
 
 from .forms import DeliveryForm
@@ -27,6 +27,10 @@ class VehicleCreateView(CreateView):
         driver_id = self.kwargs['driver']
         vehicle_id = self.object.id
         return reverse('create_delivery', args=(driver_id, vehicle_id))
+
+# def delivery_list(request):
+#     if request.method == 'POST':
+        
 
 def select_driver(request):
     all_drivers = Driver.objects.all().order_by('name')
