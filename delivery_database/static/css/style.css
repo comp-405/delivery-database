@@ -47,7 +47,8 @@ body {
 	border-radius: 3px;
 }
 
-.banner__new-delivery:hover {
+.banner__new-delivery:hover,
+.banner__list:hover {
 	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -57,6 +58,25 @@ body {
 	padding-top: 10px;
 	float: left;
 	color: white;
+
+	text-decoration: none;
+}
+
+.banner__lists {
+	width: 40vw;
+	height: 30px;
+	margin-top: 10vh;
+
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.banner__list {
+	height: 30px;
+	padding: 13px 5px 5px 5px;
+	background-color: red;
+	color: white;
+	border-radius: 3px;
 
 	text-decoration: none;
 }

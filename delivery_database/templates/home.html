@@ -10,9 +10,9 @@
     <a href="{% url 'select_driver' %}" class="banner__button">New Delivery</a>
   </div>
   <div class="banner__lists">
-    <a href="" class="banner__list"></a>
-    <a href="" class="banner__list"></a>
-    <a href="" class="banner__list"></a>
+    <a href="{% url 'driver_list' %}" class="banner__list">All Drivers</a>
+    <a href="{% url 'vehicle_list' %}" class="banner__list">All Vehicles</a>
+    <a href="{% url 'delivery_list' %}" class="banner__list">All Deliveries</a>
   </div>
 </div>
 {% endblock content %}
