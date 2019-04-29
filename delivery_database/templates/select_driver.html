@@ -3,6 +3,7 @@
 {% block title %}New Tip{% endblock title %}
 
 {% block content %}
+<h1 id="new-delivery">Select Driver</h1>
 <div class="select-list">
 {% for driver in all_drivers %}
   <a href="{% url 'select_vehicle' driver.user_id %}" class="select-list__driver driver">
