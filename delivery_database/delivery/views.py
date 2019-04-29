@@ -38,7 +38,7 @@ def vehicle_list(request):
 
 def delivery_list(request):
     deliveries = Delivery.objects.all()
-    return render(request, 'driver_list.html', {'deliveries': deliveries})
+    return render(request, 'delivery_list.html', {'deliveries': deliveries})
 
 def select_driver(request):
     all_drivers = Driver.objects.all().order_by('name')
