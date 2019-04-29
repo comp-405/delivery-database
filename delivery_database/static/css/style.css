@@ -351,21 +351,21 @@ body {
 	grid-column: 2 / 3;
 }
 
-.driver__vehicle {
+.delivery__vehicle {
 	grid-column: 3 / 4;
 }
 
-.driver__total {
+.delivery__total {
 	grid-column: 4 / 5;
 }
 
-.driver__tip {
+.delivery__tip {
 	grid-column: 5 / 6;
 
 	text-align: center;
 }
 
-.driver__percentage {
+.delivery__percentage {
 	grid-column: 6 / 7;
 
 	text-align: center;
