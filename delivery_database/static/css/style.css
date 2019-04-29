@@ -69,12 +69,13 @@ body {
 	margin-top: 10vh;
 
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 }
 
 .banner__list {
 	height: 30px;
 	padding: 13px 5px 5px 5px;
+	margin: auto 5px;
 	background-color: red;
 	color: white;
 	border-radius: 3px;
