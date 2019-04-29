@@ -326,3 +326,47 @@ body {
 .vehicle__model {
 	grid-column: 4 / 5;
 }
+
+.delivery {
+	display: grid;
+	grid-template-columns: 1fr 2fr 2fr 1fr 1fr 1fr;
+	grid-template-rows: 40px;
+
+	font-family: 'American Typewriter', sans-serif;
+}
+
+.delivery-labels {
+	color: #505050;
+	margin: auto 5px;
+	border-bottom: 1px solid black;
+}
+
+.delivery__id {
+	grid-column: 1 / 2;
+
+	text-align: center;
+}
+
+.delivery__driver {
+	grid-column: 2 / 3;
+}
+
+.driver__vehicle {
+	grid-column: 3 / 4;
+}
+
+.driver__total {
+	grid-column: 4 / 5;
+}
+
+.driver__tip {
+	grid-column: 5 / 6;
+
+	text-align: center;
+}
+
+.driver__percentage {
+	grid-column: 6 / 7;
+
+	text-align: center;
+}
