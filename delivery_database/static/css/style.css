@@ -291,3 +291,37 @@ body {
 
 	text-align: left;
 }
+
+.vehicle {
+	display: grid;
+	grid-template-columns: 1fr 2fr 2fr 3fr;
+	grid-template-rows: 40px;
+
+	font-family: 'American Typewriter', sans-serif;
+}
+
+.vehicle-labels {
+	color: #505050;
+	margin: auto 5px;
+	border-bottom: 1px solid black;
+}
+
+.vehicle__id {
+	grid-column: 1 / 2;
+
+	text-align: center;
+}
+
+.vehicle__year {
+	grid-column: 2 / 3;
+
+	text-align: center;
+}
+
+.vehicle__color {
+	grid-column: 3 / 4;
+}
+
+.vehicle__model {
+	grid-column: 4 / 5;
+}
