@@ -28,9 +28,17 @@ class VehicleCreateView(CreateView):
         vehicle_id = self.object.id
         return reverse('create_delivery', args=(driver_id, vehicle_id))
 
-# def delivery_list(request):
-#     if request.method == 'POST':
+def driver_list(request):
+    drivers = Driver.objects.all()
+    return render(request, 'driver_list.html', {'drivers': drivers})
         
+def vehicle_list(request):
+    vehicles = Vehicle.objects.all()
+    return render(request, 'vehicle_list.html', {'vehicles': vehicles})
+
+def delivery_list(request):
+    deliveries = Delivery.objects.all()
+    return render(request, 'driver_list.html', {'deliveries': deliveries})
 
 def select_driver(request):
     all_drivers = Driver.objects.all().order_by('name')
