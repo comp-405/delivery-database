@@ -243,7 +243,7 @@ body {
 	pointer-events: none;
 }
 
-.driver {
+.driver-db {
 	display: grid;
 	grid-template-columns: 1fr 2fr 3fr 4fr 3fr 3fr;
 	grid-template-rows: 40px;
@@ -257,43 +257,43 @@ body {
 	border-bottom: 1px solid black;
 }
 
-.driver__id {
+.driver-db__id {
 	grid-column: 1 / 2;
 
 	text-align: center;
 }
 
-.driver__ssn {
+.driver-db__ssn {
 	grid-column: 2 / 3;
 
 	text-align: left;
 }
 
-.driver__name {
+.driver-db__name {
 	grid-column: 3 / 4;
 
 	text-align: left;
 }
 
-.driver__email {
+.driver-db__email {
 	grid-column: 4 / 5;
 
 	text-align: left;
 }
 
-.driver__location {
+.driver-db__location {
 	grid-column: 5 / 6;
 
 	text-align: left;
 }
 
-.driver__company {
+.driver-db__company {
 	grid-column: 6 / 7;
 
 	text-align: left;
 }
 
-.vehicle {
+.vehicle-db {
 	display: grid;
 	grid-template-columns: 1fr 2fr 2fr 3fr;
 	grid-template-rows: 40px;
@@ -307,27 +307,27 @@ body {
 	border-bottom: 1px solid black;
 }
 
-.vehicle__id {
+.vehicle-db__id {
 	grid-column: 1 / 2;
 
 	text-align: center;
 }
 
-.vehicle__year {
+.vehicle-db__year {
 	grid-column: 2 / 3;
 
 	text-align: center;
 }
 
-.vehicle__color {
+.vehicle-db__color {
 	grid-column: 3 / 4;
 }
 
-.vehicle__model {
+.vehicle-db__model {
 	grid-column: 4 / 5;
 }
 
-.delivery {
+.delivery-db {
 	display: grid;
 	grid-template-columns: 1fr 2fr 2fr 1fr 1fr 1fr;
 	grid-template-rows: 40px;
@@ -341,31 +341,31 @@ body {
 	border-bottom: 1px solid black;
 }
 
-.delivery__id {
+.delivery-db__id {
 	grid-column: 1 / 2;
 
 	text-align: center;
 }
 
-.delivery__driver {
+.delivery-db__driver {
 	grid-column: 2 / 3;
 }
 
-.delivery__vehicle {
+.delivery-db__vehicle {
 	grid-column: 3 / 4;
 }
 
-.delivery__total {
+.delivery-db__total {
 	grid-column: 4 / 5;
 }
 
-.delivery__tip {
+.delivery-db__tip {
 	grid-column: 5 / 6;
 
 	text-align: center;
 }
 
-.delivery__percentage {
+.delivery-db__percentage {
 	grid-column: 6 / 7;
 
 	text-align: center;

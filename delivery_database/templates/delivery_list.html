@@ -5,27 +5,27 @@
 
 {% block content %}
 <div class="navigation">
-  <a href="{% url 'driver_list' %}" class="navigation__link navigation__link--disabled">Drivers</a>
+  <a href="{% url 'driver_list' %}" class="navigation__link">Drivers</a>
   <a href="{% url 'vehicle_list' %}" class="navigation__link">Vehicles</a>
-  <a href="{% url 'delivery_list' %}" class="navigation__link">Deliveries</a>
+  <a href="{% url 'delivery_list' %}" class="navigation__link navigation__link--disabled">Deliveries</a>
 </div>
 <div class="list">
-  <div class="delivery delivery-labels">
-    <p class="delivery__id">ID</p>
-    <p class="delivery__driver">Driver</p>
-    <p class="delivery__vehicle">Vehicle</p>
-    <p class="delivery__total">Total</p>
-    <p class="delivery__tip">Tip</p>
-    <p class="delivery__percentage">%</p>
+  <div class="delivery-db delivery-labels">
+    <p class="delivery-db__id">ID</p>
+    <p class="delivery-db__driver">Driver</p>
+    <p class="delivery-db__vehicle">Vehicle</p>
+    <p class="delivery-db__total">Total</p>
+    <p class="delivery-db__tip">Tip</p>
+    <p class="delivery-db__percentage">%</p>
   </div>
   {% for delivery in deliveries %}
-  <div class="delivery list__entry">
-    <p class="delivery__id">{{ delivery.id }}</p>
-    <p class="delivery__driver">{{ delivery.driver }}</p>
-    <p class="delivery__vehicle">{{ delivery.vehicle }}</p>
-    <p class="delivery__amount">{{ delivery.amount }}</p>
-    <p class="delivery__tip">{{ delivery.tip }}</p>
-    <p class="delivery__percentage">{% divide delivery.tip delivery.amount|floatformat %}%</p>
+  <div class="delivery-db list__entry">
+    <p class="delivery-db__id">{{ delivery.id }}</p>
+    <p class="delivery-db__driver">{{ delivery.driver }}</p>
+    <p class="delivery-db__vehicle">{{ delivery.vehicle }}</p>
+    <p class="delivery-db__amount">{{ delivery.amount }}</p>
+    <p class="delivery-db__tip">{{ delivery.tip }}</p>
+    <p class="delivery-db__percentage">{% divide delivery.tip delivery.amount|floatformat %}%</p>
   </div>
   {% empty %}
   

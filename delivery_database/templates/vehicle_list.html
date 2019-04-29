@@ -9,18 +9,18 @@
   <a href="{% url 'delivery_list' %}" class="navigation__link">Deliveries</a>
 </div>
 <div class="list">
-  <div class="vehicle vehicle-labels">
-    <p class="vehicle__id">ID</p>
-    <p class="vehicle__year">Year</p>
-    <p class="vehicle__color">Color</p>
-    <p class="vehicle__model">Model</p>
+  <div class="vehicle-db vehicle-labels">
+    <p class="vehicle-db__id">ID</p>
+    <p class="vehicle-db__year">Year</p>
+    <p class="vehicle-db__color">Color</p>
+    <p class="vehicle-db__model">Model</p>
   </div>
   {% for vehicle in vehicles %}
-  <div class="vehicle list__entry">
-    <p class="vehicle__id">{{ vehicle.id }}</p>
-    <p class="vehicle__year">{{ vehicle.year }}</p>
-    <p class="vehicle__color">{{ vehicle.color }}</p>
-    <p class="vehicle__model">{{ vehicle.model }}</p>
+  <div class="vehicle-db list__entry">
+    <p class="vehicle-db__id">{{ vehicle.id }}</p>
+    <p class="vehicle-db__year">{{ vehicle.year }}</p>
+    <p class="vehicle-db__color">{{ vehicle.color }}</p>
+    <p class="vehicle-db__model">{{ vehicle.model }}</p>
   </div>
   {% empty %}
   
