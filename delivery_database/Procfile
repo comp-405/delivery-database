@@ -1,1 +1,0 @@
-web: gunicorn delivery_database.wsgi --log-file -
