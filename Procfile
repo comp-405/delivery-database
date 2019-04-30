@@ -1,1 +1,1 @@
-web: gunicorn delivery_databasegit.wsgi
+web: gunicorn --pythonpath delivery_database delivery_database.wsgi
