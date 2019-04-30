@@ -1,0 +1,372 @@
+body {
+	margin: 0;
+}
+
+.menu {
+	height: 120px;
+}
+
+.menu__title {
+	margin: 40px 0 40px 15px;
+	color: red;
+	float: left;
+
+	font-family: 'Lobster', cursive;
+	font-size: 2em;
+	text-decoration: none;
+}
+
+.banner {
+	width: 40vw;
+	height: 30vh;
+	margin: 20vh 30vw 0 30vw;
+
+	font-family: 'Lobster', cursive;
+	text-align: center;
+}
+
+.banner__title {
+	margin-bottom: 10px;
+	color: red;
+
+	font-size: 4em;
+}
+
+.banner__subtitle {
+	color: red;
+
+	font-weight: 100;
+}
+
+.banner__new-delivery {
+	width: 120px;
+	height: 40px;
+	margin: 0 calc(20vw - 60px) 0 calc(20vw - 60px);
+	background-color: red;
+	color: white;
+	border-radius: 3px;
+}
+
+.banner__new-delivery:hover,
+.banner__list:hover,
+.navigation__link:hover {
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.banner__button {
+	width: 120px;
+	height: 30px;
+	padding-top: 10px;
+	float: left;
+	color: white;
+
+	text-decoration: none;
+}
+
+.banner__lists {
+	width: 40vw;
+	height: 30px;
+	margin-top: 10vh;
+
+	display: flex;
+	justify-content: center;
+}
+
+.banner__list {
+	height: 30px;
+	padding: 13px 5px 5px 5px;
+	margin: auto 5px;
+	background-color: red;
+	color: white;
+	border-radius: 3px;
+
+	text-decoration: none;
+}
+
+.select-list {
+	width: 90vw;
+	margin: 15px 5vw;
+
+	display: flex;
+}
+
+.select-list__driver {
+	background-color: red;
+	width: 28vw;
+	height: 180px;
+	margin: 20px 1vw;
+	border-radius: 3px;
+	color: white;
+
+	font-family: sans-serif;
+	font-weight: 100;
+	text-decoration: none;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 45px 45px 45px 45px;
+}
+
+.select-list__driver:hover,
+.select-list__vehicle:hover {
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.driver__field {
+	margin-top: 10px;
+	height: 50px;
+}
+
+.driver__name {
+	text-align: center;
+}
+
+.driver__email,
+.driver__company,
+.driver__location,
+.vehicle__year,
+.vehicle__model,
+.vehicle__color {
+	margin-left: 15px;
+}
+
+.new-driver__text,
+.new-vehicle__text {
+	font-family: 'Lobster', cursive;
+	font-size: 2em;
+	margin: 60px 0 0 40px;
+}
+
+.select-list__vehicle {
+	background-color: red;
+	width: 28vw;
+	height: 180px;
+	margin: 20px 1vw;
+	border-radius: 3px;
+	color: white;
+
+	font-family: sans-serif;
+	font-weight: 100;
+	text-decoration: none;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 60px 60px 60px;
+}
+
+#new-delivery,
+#new-driver,
+#new-vehicle {
+	color: red;
+
+	font-family: 'Lobster', cursive;
+	font-size: 3em;
+	text-align: center;
+}
+
+.delivery-form {
+	width: 20vw;
+	margin: auto 40vw;
+}
+
+.delivery-form p {
+	display: block;
+}
+
+.delivery-form__submit {
+	width: 10vw;
+	height: 40px;
+	margin: 0 5vw;
+	background-color: red;
+	color: white;
+	border: none;
+	border-radius: 3px;
+
+	font-family: 'Lobster', cursive;
+}
+
+.delivery-form__submit:hover {
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+#new-delivery-success {
+	color: red;
+
+	font-family: 'Lobster', cursive;
+	font-size: 2em;
+	text-align: center;
+}
+
+#new-delivery-home {
+	background-color: red;
+	color: white;
+	width: 120px;
+	height: 20px;
+	padding: 10px;
+	margin: 0 49vw;
+	border-radius: 3px;
+
+	font-family: 'Lobster', cursive;
+	text-decoration: none;
+}
+
+#new-delivery-home:hover {
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.navigation {
+	width: calc(100vw - 10px);
+	height: 60px;
+
+	display: flex;
+	align-items: stretch;
+}
+
+.navigation__link {
+	height: 45px;
+	margin: 0 5px 0 5px;
+	padding: 15px 0 0 10vw;
+	background-color: red;
+	color: white;
+	border-radius: 3px;
+
+	font-family: 'Lobster', cursive;
+	font-size: 1.5em;
+	text-decoration: none;
+
+	flex: 1;
+}
+
+.navigation__link--disabled {
+	background-color: #e96d6d;
+	color: #d4d4d4;
+	pointer-events: none;
+}
+
+.driver-db {
+	display: grid;
+	grid-template-columns: 1fr 2fr 3fr 4fr 3fr 3fr;
+	grid-template-rows: 40px;
+
+	font-family: 'American Typewriter', sans-serif;
+}
+
+.driver-labels {
+	color: #505050;
+	margin: auto 5px;
+	border-bottom: 1px solid black;
+}
+
+.driver-db__id {
+	grid-column: 1 / 2;
+
+	text-align: center;
+}
+
+.driver-db__ssn {
+	grid-column: 2 / 3;
+
+	text-align: left;
+}
+
+.driver-db__name {
+	grid-column: 3 / 4;
+
+	text-align: left;
+}
+
+.driver-db__email {
+	grid-column: 4 / 5;
+
+	text-align: left;
+}
+
+.driver-db__location {
+	grid-column: 5 / 6;
+
+	text-align: left;
+}
+
+.driver-db__company {
+	grid-column: 6 / 7;
+
+	text-align: left;
+}
+
+.vehicle-db {
+	display: grid;
+	grid-template-columns: 1fr 2fr 2fr 3fr;
+	grid-template-rows: 40px;
+
+	font-family: 'American Typewriter', sans-serif;
+}
+
+.vehicle-labels {
+	color: #505050;
+	margin: auto 5px;
+	border-bottom: 1px solid black;
+}
+
+.vehicle-db__id {
+	grid-column: 1 / 2;
+
+	text-align: center;
+}
+
+.vehicle-db__year {
+	grid-column: 2 / 3;
+
+	text-align: center;
+}
+
+.vehicle-db__color {
+	grid-column: 3 / 4;
+}
+
+.vehicle-db__model {
+	grid-column: 4 / 5;
+}
+
+.delivery-db {
+	display: grid;
+	grid-template-columns: 1fr 2fr 2fr 1fr 1fr 1fr;
+	grid-template-rows: 40px;
+
+	font-family: 'American Typewriter', sans-serif;
+}
+
+.delivery-labels {
+	color: #505050;
+	margin: auto 5px;
+	border-bottom: 1px solid black;
+}
+
+.delivery-db__id {
+	grid-column: 1 / 2;
+
+	text-align: center;
+}
+
+.delivery-db__driver {
+	grid-column: 2 / 3;
+}
+
+.delivery-db__vehicle {
+	grid-column: 3 / 4;
+}
+
+.delivery-db__total {
+	grid-column: 4 / 5;
+}
+
+.delivery-db__tip {
+	grid-column: 5 / 6;
+
+	text-align: center;
+}
+
+.delivery-db__percentage {
+	grid-column: 6 / 7;
+
+	text-align: center;
+}
