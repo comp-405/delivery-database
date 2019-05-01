@@ -2,6 +2,7 @@
 
 ## Setup
 
+- Clone this project to your device.
 - Run `python --version` and ensure that you are using Python 3.7+.
 - Run `pip install pipenv`, if `pipenv` is not installed.
 - Run `pipenv install` to install all dependencies.
