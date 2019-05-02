@@ -23,8 +23,8 @@
     <p class="delivery-db__id">{{ delivery.id }}</p>
     <p class="delivery-db__driver">{{ delivery.driver }}</p>
     <p class="delivery-db__vehicle">{{ delivery.vehicle }}</p>
-    <p class="delivery-db__amount">{{ delivery.amount }}</p>
-    <p class="delivery-db__tip">{{ delivery.tip }}</p>
+    <p class="delivery-db__amount">${{ delivery.amount|floatformat:2 }}</p>
+    <p class="delivery-db__tip">${{ delivery.tip|floatformat:2 }}</p>
     <p class="delivery-db__percentage">{% divide delivery.tip delivery.amount|floatformat %}%</p>
   </div>
   {% empty %}
