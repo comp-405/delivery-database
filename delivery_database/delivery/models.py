@@ -74,8 +74,8 @@ class Vehicle(models.Model):
       return f"{self.year} {self.model}"
 
 class Delivery(models.Model):
-    amount = models.IntegerField()
-    tip = models.IntegerField()
+    amount = models.FloatField()
+    tip = models.FloatField()
     driver = models.ForeignKey(
       Driver,
       related_name = 'deliveries',
