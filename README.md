@@ -7,4 +7,4 @@
 - Run `pip install pipenv`, if `pipenv` is not installed.
 - Run `pipenv install` to install all dependencies.
 - Navigate to the `delivery_database/` directory (this should contain the `manage.py` file).
-- Run `python manage.py runserver` to run the server locally on port 3000
+- Run `python manage.py runserver` to run the server locally on port 8000
